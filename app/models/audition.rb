@@ -11,6 +11,8 @@ class Audition < ActiveRecord::Base
   # Audition#call_back will change the the hired attribute to true
   def call_back()
     self.hired = true
-    self.save
+    # NOTE: Here is the Ruby Docs page on '.save!' method:
+    # https://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-save-21
+    self.save!
   end
 end
