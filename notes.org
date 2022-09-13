@@ -1,0 +1,5 @@
+This is the command I used to migrate the database accordingly:
+#+begin_src bash
+bundle exec rake db:migrate
+bundle exec rake db:rollback
+#+end_src
